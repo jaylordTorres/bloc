@@ -10,6 +10,8 @@ dependencies:
     sdk: flutter
   flutter_bloc:
     path: ../../packages/flutter_bloc
+  bloc_dev_tools:
+    path: ../../packages/bloc_dev_tools
 
 dev_dependencies:
   flutter_test:

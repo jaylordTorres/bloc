@@ -12,11 +12,11 @@ class AuthenticationBloc
   }
 
   void onLogin({@required String token}) {
-    dispatch(LoggedIn(token: token));
+    dispatch(Login(token: token));
   }
 
   void onLogout() {
-    dispatch(LoggedOut());
+    dispatch(Logout());
   }
 
   @override
@@ -35,14 +35,14 @@ class AuthenticationBloc
       }
     }
 
-    if (event is LoggedIn) {
+    if (event is Login) {
       yield state.copyWith(isLoading: true);
 
       await _persistToken(event.token);
       yield AuthenticationState.authenticated();
     }
 
-    if (event is LoggedOut) {
+    if (event is Logout) {
       yield state.copyWith(isLoading: true);
 
       await _deleteToken();

@@ -1,0 +1,17 @@
+{
+  "name": "bloc-dev-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server",
+    "server": "node server.js"
+  },
+  "keywords": [],
+  "author": "Felix Angelov",
+  "license": "MIT",
+  "dependencies": {
+    "opn": "^5.4.0",
+    "ws": "^6.1.2"
+  }
+}

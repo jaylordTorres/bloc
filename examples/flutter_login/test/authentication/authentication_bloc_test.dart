@@ -36,7 +36,7 @@ void main() {
     });
   });
 
-  group('LoggedIn', () {
+  group('Login', () {
     test('emits [loading, authenticated] when token is persisted', () {
       final expectedResponse = [
         AuthenticationState.initializing().copyWith(isLoading: true),
@@ -48,13 +48,13 @@ void main() {
         emitsInOrder(expectedResponse),
       );
 
-      authenticationBloc.dispatch(LoggedIn(
+      authenticationBloc.dispatch(Login(
         token: 'instance.token',
       ));
     });
   });
 
-  group('LoggedOut', () {
+  group('Logout', () {
     test('emits [loading, unauthenticated] when token is deleted', () {
       final expectedResponse = [
         AuthenticationState.initializing().copyWith(isLoading: true),
@@ -66,7 +66,7 @@ void main() {
         emitsInOrder(expectedResponse),
       );
 
-      authenticationBloc.dispatch(LoggedOut());
+      authenticationBloc.dispatch(Logout());
     });
   });
 }

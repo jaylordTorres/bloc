@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bloc_dev_tools/bloc_dev_tools.dart';
 
 import 'package:flutter_infinite_list/bloc/bloc.dart';
 import 'package:flutter_infinite_list/models/models.dart';
 
 void main() {
-  BlocSupervisor().delegate = SimpleBlocDelegate();
+  BlocSupervisor().delegate = DevBlocDelegate();
   runApp(MyApp());
 }
 

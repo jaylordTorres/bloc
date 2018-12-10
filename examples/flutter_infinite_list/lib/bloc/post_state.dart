@@ -55,8 +55,14 @@ class PostState {
   }
 
   @override
-  String toString() =>
-      'PostState { isInitializing: $isInitializing, posts: ${posts.length.toString()}, isError: $isError, hasReachedMax: $hasReachedMax }';
+  String toString() => """
+    { 
+      "isInitializing": $isInitializing,
+      "posts": ${posts.toString()},
+      "isError": $isError,
+      "hasReachedMax": $hasReachedMax
+    }
+  """;
 
   @override
   bool operator ==(Object other) =>

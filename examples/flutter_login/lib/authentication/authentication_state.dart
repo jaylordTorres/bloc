@@ -66,6 +66,9 @@ class AuthenticationState {
       isInitializing.hashCode ^ isAuthenticated.hashCode ^ isLoading.hashCode;
 
   @override
-  String toString() =>
-      'AuthenticationState { isInitializing: $isInitializing, isLoading: $isLoading, isAuthenticated: $isAuthenticated }';
+  String toString() => """{
+        "isInitializing": $isInitializing,
+        "isLoading": $isLoading,
+        "isAuthenticated": $isAuthenticated
+      }""";
 }

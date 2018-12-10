@@ -72,6 +72,10 @@ class LoginState {
       token.hashCode;
 
   @override
-  String toString() =>
-      'LoginState { isLoading: $isLoading, isLoginButtonEnabled: $isLoginButtonEnabled, error: $error, token: $token }';
+  String toString() => """{
+        "isLoading": $isLoading,
+        "isLoginButtonEnabled": $isLoginButtonEnabled,
+        "error": "$error",
+        "token": "$token"
+        }""";
 }

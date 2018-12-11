@@ -46,9 +46,9 @@ class LoginFormState extends State<LoginForm> {
         BuildContext context,
         LoginState loginState,
       ) {
-        if (_loginSucceeded(loginState)) {
-          _authBloc.onLogin(token: loginState.token);
+        if (_loginSucceeded(loginState)) {          
           _loginBloc.onLoginSuccess();
+          _authBloc.onLogin(token: loginState.token);
         }
 
         if (_loginFailed(loginState)) {

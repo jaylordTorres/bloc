@@ -2,17 +2,19 @@ import 'package:meta/meta.dart';
 
 abstract class AuthenticationEvent {}
 
-class AppStarted extends AuthenticationEvent {
+class AppStart extends AuthenticationEvent {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is AppStarted && runtimeType == other.runtimeType;
+      other is AppStart && runtimeType == other.runtimeType;
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  String toString() => 'AppStarted';
+  String toString() => """{
+    "AuthenticationEvent.AppStart": {}
+  }""";
 }
 
 class Login extends AuthenticationEvent {
@@ -31,7 +33,11 @@ class Login extends AuthenticationEvent {
   int get hashCode => token.hashCode;
 
   @override
-  String toString() => 'Login($token)';
+  String toString() => """{
+    "AuthenticationEvent.Login": {
+      "token": "$token"
+    }
+  }""";
 }
 
 class Logout extends AuthenticationEvent {
@@ -44,5 +50,7 @@ class Logout extends AuthenticationEvent {
   int get hashCode => runtimeType.hashCode;
 
   @override
-  String toString() => 'Logout';
+  String toString() => """{
+    "AuthenticationEvent.Logout": {}
+  }""";
 }

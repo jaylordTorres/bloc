@@ -32,7 +32,7 @@ void main() {
         emitsInOrder(expectedResponse),
       );
 
-      authenticationBloc.dispatch(AppStarted());
+      authenticationBloc.dispatch(AppStart());
     });
   });
 

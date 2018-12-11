@@ -67,8 +67,10 @@ class AuthenticationState {
 
   @override
   String toString() => """{
-        "isInitializing": $isInitializing,
-        "isLoading": $isLoading,
-        "isAuthenticated": $isAuthenticated
-      }""";
+    "AuthenticationState": {
+      "isInitializing": $isInitializing,
+      "isLoading": $isLoading,
+      "isAuthenticated": $isAuthenticated
+    }
+  }""";
 }

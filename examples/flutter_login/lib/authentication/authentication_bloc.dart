@@ -8,7 +8,7 @@ import 'package:flutter_login/authentication/authentication.dart';
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
   void onAppStart() {
-    dispatch(AppStarted());
+    dispatch(AppStart());
   }
 
   void onLogin({@required String token}) {
@@ -25,7 +25,7 @@ class AuthenticationBloc
   @override
   Stream<AuthenticationState> mapEventToState(
       AuthenticationState state, AuthenticationEvent event) async* {
-    if (event is AppStarted) {
+    if (event is AppStart) {
       final bool hasToken = await _hasToken();
 
       if (hasToken) {

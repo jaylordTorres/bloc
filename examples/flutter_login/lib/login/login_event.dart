@@ -26,12 +26,16 @@ class LoginButtonPressed extends LoginEvent {
 
   @override
   String toString() => """{
-        "username": "$username",
-        "password": "$password",
-      }""";
+    "LoginEvent.LoginButtonPressed": {
+      "username": "$username",
+      "password": "$password"
+    }
+  }""";
 }
 
 class LoggedIn extends LoginEvent {
   @override
-  String toString() => 'LoggedIn';
+  String toString() => """{
+    "LoginEvent.LoggedIn": {}
+  }""";
 }

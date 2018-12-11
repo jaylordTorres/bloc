@@ -73,9 +73,11 @@ class LoginState {
 
   @override
   String toString() => """{
-        "isLoading": $isLoading,
-        "isLoginButtonEnabled": $isLoginButtonEnabled,
-        "error": "$error",
-        "token": "$token"
-        }""";
+    "LoginState": {
+      "isLoading": $isLoading,
+      "isLoginButtonEnabled": $isLoginButtonEnabled,
+      "error": "$error",
+      "token": "$token"
+    }
+  }""";
 }

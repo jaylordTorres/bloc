@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Bloc Dev Tools</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<div id="container"></div>
+		<div class="fab" onclick="clearAll()">
+			<i class="material-icons"> clear_all </i>
+		</div>
+		<script type="text/javascript" src="./renderjson.js"></script>
+		<script type="text/javascript" src="./index.js"></script>
+		<script>
+			require("./renderer.js");
+		</script>
+	</body>
+</html>

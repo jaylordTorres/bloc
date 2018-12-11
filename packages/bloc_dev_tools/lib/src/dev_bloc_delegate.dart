@@ -10,7 +10,7 @@ class DevBlocDelegate extends BlocDelegate {
     channel.sink.add(
       '''{
         "currentState": ${transition.currentState.toString()},
-        "event": "${transition.event.toString()}",
+        "event": ${transition.event.toString()},
         "nextState": ${transition.nextState.toString()},
         "timestamp":  ${DateTime.now().millisecondsSinceEpoch}
       }''',

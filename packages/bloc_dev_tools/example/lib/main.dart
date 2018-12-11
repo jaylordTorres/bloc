@@ -34,6 +34,12 @@ class MyAppState extends State<MyApp> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    _counterBloc.dispose();
+    super.dispose();
+  }
 }
 
 class CounterPage extends StatelessWidget {
@@ -47,7 +53,10 @@ class CounterPage extends StatelessWidget {
         bloc: _counterBloc,
         builder: (BuildContext context, int count) {
           return Center(
-            child: Text('$count'),
+            child: Text(
+              '$count',
+              style: TextStyle(fontSize: 24.0),
+            ),
           );
         },
       ),
@@ -83,12 +92,16 @@ abstract class CounterEvent {}
 
 class Increment extends CounterEvent {
   @override
-  String toString() => 'Increment';
+  String toString() => """{
+    "CounterEvent.Increment": {}
+  }""";
 }
 
 class Decrement extends CounterEvent {
   @override
-  String toString() => 'Decrement';
+  String toString() => """{
+    "CounterEvent.Decrement": {}
+  }""";
 }
 
 class CounterBloc extends Bloc<CounterEvent, int> {
